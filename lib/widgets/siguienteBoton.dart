@@ -13,9 +13,9 @@ class SiguienteBoton extends StatelessWidget {
         style: ButtonStyle(elevation:
             MaterialStateProperty.resolveWith<double>((states) {
           return 10.0;
+        }), backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+          return CustomTheme.olorLightGray;
         }), shadowColor: MaterialStateProperty.resolveWith<Color>((states) {
-          // no me agarra el color de sombra
-
           return CustomTheme.colorBlue;
         }), padding: MaterialStateProperty.resolveWith<EdgeInsets>((states) {
           return EdgeInsets.symmetric(horizontal: 15.0, vertical: 18.0);

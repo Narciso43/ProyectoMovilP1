@@ -52,7 +52,7 @@ class SiguienteBoton extends StatelessWidget {
         })),
         onPressed: () {},
         child: Text(
-          'Siguiente06',
+          'SIGUIENTE',
           style: TextStyle(
             fontSize: 20.0,
           ),
@@ -70,19 +70,19 @@ class _OnboarSliderPag extends StatelessWidget {
     return PageView(
       children: [
         OnboardinPaso(
-          rutaImagen: 'assets/img/33.png',
-          titulo: 'cafesin',
-          subtitulo: 'sfsfasfs',
-          color: Color.fromARGB(255, 244, 67, 54),
+          rutaImagen: 'assets/img/mexico.png',
+          titulo: 'MEXICO PAIS DE SIEMBRA DE  CAFÉ',
+          subtitulo: 'FFFFASDFASDFASDFASDF',
+          color: Color.fromARGB(255, 28, 21, 20),
         ),
         OnboardinPaso(
-          rutaImagen: 'assets/img/cafe1.png',
+          rutaImagen: 'assets/img/planta.png',
           titulo: 'cafesin',
           subtitulo: 'sfsfasfs',
           color: Color.fromARGB(255, 28, 67, 99),
         ),
         OnboardinPaso(
-          rutaImagen: 'assets/img/plan1_2.png',
+          rutaImagen: 'assets/img/cultivos.png',
           titulo: 'cafesin',
           subtitulo: 'sfsfasfs',
           color: Colors.yellow,
@@ -103,15 +103,15 @@ class _puntos extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: screenHeight * 0.12),
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        _punto(),
+        _punto(active: false),
         SizedBox(
           width: 10,
         ),
-        _punto(),
+        _punto(active: true),
         SizedBox(
           width: 10,
         ),
-        _punto(),
+        _punto(active: false),
         SizedBox(
           width: 10,
         ),
@@ -123,13 +123,17 @@ class _puntos extends StatelessWidget {
 class _punto extends StatelessWidget {
   const _punto({
     Key? key,
+    required this.active,
   }) : super(key: key);
+
+  final bool active;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue,
+        color:
+            active ? CustomTheme.colorBlue : Color.fromARGB(255, 86, 114, 137),
         borderRadius: BorderRadius.circular(4.0),
       ),
       width: 10.0,
